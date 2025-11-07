@@ -84,6 +84,58 @@ Para usar este servidor con Claude Desktop, agrega esta configuración a tu arch
 
 ## 🚀 Opción 2: Demo con Flask + Orchestrator (Método Original)
 
+### Variante A: Con Google Gemini 🆕
+
+**Terminal 1 - Servidor Flask (API Especialista):**
+```bash
+cd mcp
+python app.py
+```
+
+**Terminal 2 - Orquestador con Gemini:**
+
+1. Asegúrate de tener tu API key de Google:
+```bash
+echo "GOOGLE_API_KEY=tu_api_key_aqui" > .env
+```
+
+2. Coloca una imagen de retina para probar (ej: `test_image.jpg`)
+
+3. Ejecuta el orquestador:
+```bash
+python orchestrator_gemini.py
+```
+
+**¿Qué hace?**
+- Llama al servidor Flask (CNN) para analizar la imagen
+- Envía la imagen + resultado CNN + datos de sensores a Gemini
+- Gemini genera un reporte médico completo combinando toda la información
+- Guarda el reporte en `reporte_gemini.txt`
+
+### Variante B: Con Claude (Original)
+
+**Terminal 1 - Servidor Flask:**
+```bash
+cd mcp
+python app.py
+```
+
+**Terminal 2 - Orquestador con Claude:**
+
+1. Crea el archivo `.env` con tu API key de Claude:
+```bash
+echo "CLAUDE_API_KEY=tu_api_key_aqui" > .env
+```
+
+2. Ejecuta:
+```bash
+python orchestrator.py
+```
+
+---
+
+## 🚀 Opción 3: Paso a Paso (Para Codespaces)
+
 ### Paso 1: Preparar el entorno
 
 Abre tu Codespace, crea todos los archivos, sube tu `cnn_model_94.h5` y tu `test_image.jpg`.
