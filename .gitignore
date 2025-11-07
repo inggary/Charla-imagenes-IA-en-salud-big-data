@@ -1,3 +1,45 @@
+# Datos y modelos grandes
 notebooks/data
+notebooks/data_cnn
 notebooks/cifar_net.pth
+notebooks/*.h5
+
+# Archivos de entorno
+.env
+mcp/.env
+
+# Entornos virtuales
+.venv/
+venv/
+mcp/.venv/
+mcp/venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
 .ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# UV/pip
+uv.lock
+*.egg-info/
+
+# Archivos temporales
+uploads/
+*.tmp
+*.log
+
+# macOS
+.DS_Store

@@ -1,0 +1,13 @@
+[project]
+name = "servidor-salud-mcp"
+version = "0.1.0"
+description = "Servidor MCP para diagnóstico híbrido de salud"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp",
+    "tensorflow>=2.15.0",
+    "numpy>=1.24.0,<2.0.0",
+    "opencv-python-headless>=4.8.0",
+    "pillow>=10.0.0",
+]
+
